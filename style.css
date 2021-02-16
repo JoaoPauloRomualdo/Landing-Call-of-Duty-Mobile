@@ -1,0 +1,157 @@
+@keyframes fadeIn {
+    0% { 
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100% { 
+        opacity: 1; 
+    }
+}
+
+:root {
+    --primary-color : #FDC600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0A0E0F;
+    overflow: hidden;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.container {
+    width: min(90vw, 1128px);
+    margin: auto;
+}
+
+.navbar {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 94px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 33px;
+}
+
+nav ul li a {
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all .2s ease-in-out;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a.btn-active {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+nav ul li a.btn-active:hover {
+    filter: brightness(90%);
+    
+}
+
+.content {
+    width: 500px;
+    text-align: center;
+    margin-top: 120px;
+    opacity: 0;
+    animation: fadeIn 500ms linear; 
+    animation-fill-mode:forwards;
+    animation-delay:1s;
+}
+
+.content p {
+    color: var(--primary-color);
+    font-size: 36px;
+    letter-spacing: 0.2rem;
+    margin: 33px 0;
+}
+
+.content h3 {
+    color: white;
+    letter-spacing: 0.2rem;
+}
+
+.content img {
+    width: 400px;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    margin: 33px 0;
+}
+
+.btns {
+    background-color: #171B1E;
+    padding: 10px 15px;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all .2s ease-in-out;
+
+}
+
+.btns:hover {
+    background-color: #171b1e94;
+}
+
+.btns i {
+    font-size: 20px;
+    padding-right: 18px;
+}
+
+.btns i:first-child{
+    font-size: 27px;
+}
+
+.feature-img {
+    height: 100%;
+    position: absolute;
+    bottom: -150px;
+    right: 40px;
+    opacity: 0;
+    animation: fadeIn 500ms linear; 
+    animation-fill-mode:forwards;
+    animation-delay:2s;
+}
+
